@@ -1,0 +1,535 @@
+/* (*{}will be applicable for all the html page)*/
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    min-height: 130vh;
+    width: 100%;
+    background-image: url("../images/sunset-edit.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2em 3em;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+        display:inline-block;
+        font-size: 2rem;
+        font-family: sans-serif;
+        color: #e0a73d;
+        text-decoration: none;
+        margin-left: 10px 0;
+}
+.logo span{
+    color: #fc7406;
+}
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+.nav_links ul li{
+     list-style: none;
+     display: inline-block ;
+     padding: 8px 12px;
+     position: relative;
+}
+.nav_links ul li a{
+    text-decoration: none;
+    color:#e0a73d;
+    font-size: 1.3rem;
+}
+
+.nav_links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav_links ul li a:hover{
+    color: white;
+}
+.nav_links ul li a:hover::after{
+    width: 100%;
+}
+.text_box{
+    width:90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*will bw in the center of the div*/
+    text-align: center;
+}
+.text_box h1{
+    font-size: 4rem;
+}
+.text_box p{
+    margin: 1em 0 2em;
+    font-size: 1rem;
+    color:white;
+}
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: .1em solid #fff;
+    padding: 12px 34px;
+    font-size: 1.75rem;
+    background: transparent;
+    position: relative;
+    border-radius: 0;
+    cursor: pointer;
+}
+.button:hover{
+    border: .1em solid #fc7406;
+    background: #fc7406;
+    transition: 1s;
+}
+
+/*design*/
+.design{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10em;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.row{
+    margin-top: 5%;
+    display: flex;  /*---flex---*/
+    justify-content: space-between;
+}
+.design_col{
+    flex-basis: 31%;/*flexbasis*/
+    background: rgb(231, 231, 231);
+    border-radius: 1em;
+    margin-bottom: 5%;
+    padding: 2em 1.2em;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 1em 0;
+}
+.design_col:hover{
+    box-shadow:0 0 2em 0 grey;
+}
+
+
+
+/*----------decor station------------*/
+.office{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3.5em ;
+}
+.office_col{
+    flex-basis: 32%;
+    border-radius: 2em;
+    margin-bottom: 3em;
+    position: relative;/*position and overflow*/
+    overflow: hidden;
+    border: solid rgb(214, 214, 214);
+}
+.office_col img{
+    width: 100%;
+    display:block;
+}
+
+.title{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+}
+.title h3{
+    width: 100%;
+    font-weight: 500;
+    color: black;
+    font-size: 2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);/*??*/
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.title:hover{
+    background: rgb(231, 231, 231,0.8);/* 0.8 is opacity*/
+}
+.title:hover h3{
+    bottom:40%;/* 50% not come o/p?*/
+    opacity: 1;
+}
+/*services*/
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4em ;
+}
+.services_col{
+    flex-basis: 32%;
+    border-radius: 2em;
+    margin-bottom: 3em;
+    margin-right: 1em;
+    position: relative;
+    overflow: hidden;
+    border: solid rgb(214, 214, 214);
+    transition: 0.5s;
+}
+.services_col:hover{
+    box-shadow:0 0 2em 0 grey;
+}
+.services_col img{
+    width: 100%;
+    border-radius: 1em;
+    display:block;
+}
+.services_col p{
+    padding: 0;
+}
+/*Testemoinal*/
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 1em;
+    text-align: center;
+}
+.testimonials_col{
+    flex-basis: 40%;
+    border-radius: 1em;
+    margin-bottom: 5%;
+    text-align: left;
+    background: rgb(231, 231, 231);
+    padding: 2em;
+    cursor:pointer;
+    display: flex;
+}
+/* h3 and p is in div star not used */
+.testimonials_col h3{
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 1em;
+   
+}
+.testimonials_col- p{
+    padding: 0;
+}
+.testimonials_col img{
+    height: 4em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    border-radius: 50%;
+
+}
+
+
+/*Call to Action i.e cta or Contact us*/
+.cta{
+    margin:5em auto;
+    padding: 5em auto;
+    width:80%;
+    text-align: center;
+    background: url("../images/Contact-Us-edit.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1em;
+}
+.cta h1{
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 ;
+}
+.cta a.button{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+footer{
+    width:100%;
+    text-align: center;
+    padding: 3em 0;
+
+}
+footer h4{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight:600 ;
+    font-size: 1.5rem;
+}
+footer p{
+    margin-bottom: .75em;
+    margin-top: .75em;
+}
+.icon a{
+    color: rgb(1, 1, 77);
+    margin: 0.3em;
+    cursor: pointer;
+    padding: .2em ;
+    text-decoration: none;
+    transition: .2s;
+}
+.icon a:hover{
+    color: #fc7406;
+ 
+}
+
+
+/* contact us page*/
+.sub_header{
+    background: rgb(1, 1, 77);
+}
+/* Contact us page*/
+.contact_page{
+    margin: 1em;
+    padding: 1em;
+}
+.wrapper{
+    width: 80%;
+    margin: auto;
+    box-align: center;
+    padding-top: 1em;
+}
+.row{
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+.col{
+    width:50%;
+}
+
+.col address {
+    font-size: 1.5rem;
+}
+.col h3{
+    text-align: left;
+}
+.col p{
+    font-size: 1.5rem;
+}
+fieldset{
+    padding: .5em  5em;
+    background: #f7efe0;
+}
+legend{
+    font-weight: bold;
+    text-align: left;
+}
+.col label{
+    color: rgb(1, 1, 77);
+    font-weight: bold;
+}
+.col form a{
+    color: darkblue;
+}
+.col form a:hover{
+    color: blue;
+    text-decoration: none;
+}
+.map{
+    margin: 2em  8em ;
+}
+
+/*About us page*/
+.about_us{
+    width: 80%;
+    margin: auto;
+    padding-top: 8em ;
+    padding-bottom: 5em;
+}
+.about_us h1{
+    text-align: center;
+    font-weight: lighter;
+   /* line height: 1.4rem;
+    letter-spacing:0.5rem;*/
+}
+.about_col{
+    flex-basis: 48%;
+    padding: 3em .2em;
+}
+.about_col img{
+    width: 100%;
+}
+.about_col h2{
+    padding-top: 0;
+    font-size: 3rem;
+}
+.about_col p{
+    padding:1.5em 0 2.5em;
+    text-align: justify;
+}
+.about_col  .abt_button{
+    border: .1em solid rgb(1, 1, 77);
+    background: transparent;
+    color: rgb(1, 1, 77);
+
+}
+.abt_button:hover{
+    color: white ;
+    border: 0.1em solid #fc7406;
+    background: #fc7406;
+    transition: .5s;
+}
+
+/*Design page*/
+.slider{
+    background-color: white;
+}
+.slider h1{
+    text-align: center;
+   /* line height:1.4;
+    letter-spacing:0.5rem;*/
+    font-weight: lighter;
+}
+h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1em;
+    /*line height:1.4;
+    letter-spacing:0.5rem;*/
+    text-align: center;
+}
+.slider_bed{
+    width: 80%;
+    height: 50vh;
+    margin-top: 15em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    background-image:url("../images/bedroom_op1.jpg") ;
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow:.1em .2em .2em .1em grey ;
+            /*left/right  top/bottom   blur   blur effect bgcolor*/
+    animation: slider 9s infinite ease-out;
+         /* name of ani. durationtime timingfun.*/
+}
+ 
+
+@keyframes slider {
+        0%{background-image:url("../images/bedroom_op1.jpg") ;}
+        35%{background-image:url("../images/bedroom_op2.jpg") ;}
+        75%{background-image:url("../images/study-room_op2.jpg") ;}
+        
+}
+.slider_bed:hover{
+    box-shadow:0 0 2em 0 white;
+     /*left/right  top/bottom   blur   blur effect bgcolor*/
+}
+.slider_living{
+    width: 70%;
+    height: 50vh;
+    margin-top: 15em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    background-image:url("../images/livingroom-op3.jpg") ;
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow:.1em .2em .2em .1em grey ;
+            /*left/right  top/bottom   blur   blur effect bgcolor*/
+    animation: living 30s infinite ease-out;
+         /* name of ani. durationtime timingfun.*/
+}
+
+.slider_living:hover{
+    box-shadow:0 0 2em 0 white;
+}
+
+@keyframes living {
+        0%{background-image:url("../images/livingroom-op3.jpg") ;}
+        35%{background-image:url("../images/livingroom-op4.jpg") ;}
+        75%{background-image:url("../images/livingroom-op5.jpg") ;}
+        
+}
+
+.slider_kitchen{
+    width: 70%;
+    height: 50vh;
+    margin-top: 15em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    background-image:url("../images/kitchen-op1.jpg") ;
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow:.1em .2em .2em .1em grey ;
+            /*left/right  top/bottom   blur   blur effect bgcolor*/
+    animation: kitchen 9s infinite ease-out;
+         /* name of ani. durationtime timingfun.*/
+}
+ 
+
+@keyframes kitchen {
+        0%{background-image:url("../images/kitchen-op1.jpg") ;}
+        35%{background-image:url("../images/kitchen-op2.jpg") ;}
+        75%{background-image:url("../images/kitchen-op3.jpg") ;}
+        
+}
+
+.slider_kitchen:hover{
+    box-shadow:0 0 2em 0 white;
+}
+
+.slider_kids{
+    width: 70%;
+    height: 400px;
+    margin-top: 15em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    background-image:url("../images/kidsroom_op1.jpg") ;
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow:.1em .2em .2em .1em grey ;
+            /*left/right  top/bottom   blur   blur effect bgcolor*/
+    animation: kids 9s infinite ease-out;
+         /* name of ani. durationtime timingfun.*/
+}
+ 
+
+@keyframes kids {
+        0%{background-image:url("../images/kidsroom_op1.jpg") ;}
+        35%{background-image:url("../images/kidsroom_op2.jpg") ;}
+        75%{background-image:url("../images/kidsroom_op3.jpg") ;}
+        
+}
+
+.slider_kids:hover{
+    box-shadow:0 0 2em 0 white;
+}
